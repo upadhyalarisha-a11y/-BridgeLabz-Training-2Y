@@ -1,0 +1,20 @@
+import java.util.arrayList;
+
+public class Arraylist7 {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // Adding elements
+        list.add(10);
+        list.add(20);
+        list.add(30);
+
+        System.out.println("Original List: " + list);
+
+        // Add element at the end
+        list.add(40);
+
+        System.out.println("After adding at the end: " + list);
+    }
+}
