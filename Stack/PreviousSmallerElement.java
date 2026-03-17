@@ -2,18 +2,18 @@ package Stack;
 
 import java.util.Stack;
 
-public class NextGreaterElement {
+public class PreviousSmallerElement {
 
-    public static void nextGreater(int arr[])
+    public static void previousSmaller(int arr[])
     {
         int n = arr.length;
         int res[] = new int[n];
 
         Stack<Integer> st = new Stack<>();
 
-        for(int i = n-1; i >= 0; i--)
+        for(int i = 0; i < n; i++)
         {
-            while(!st.isEmpty() && arr[i] >= st.peek())
+            while(!st.isEmpty() && arr[i] <= st.peek())
             {
                 st.pop();
             }
@@ -32,8 +32,8 @@ public class NextGreaterElement {
 
     public static void main(String[] args)
     {
-        int arr[] = {1,3,2,4};
+        int arr[] = {4,5,2,10,8};
 
-        nextGreater(arr);
+        previousSmaller(arr);
     }
 }
